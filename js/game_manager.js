@@ -13,12 +13,42 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.setup();
 }
 
+function toggle_visibility(id) {
+    var a = document.getElementById('simanta')
+    a.style.display = 'none';
+    var a1 = document.getElementById('webdev')
+    a1.style.display = 'none';
+    var a2 = document.getElementById('sailboat')
+    a2.style.display = 'none';
+    var a3 = document.getElementById('spherecodes')
+    a3.style.display = 'none';
+    var a4 = document.getElementById('bitcoins')
+    a4.style.display = 'none';
+    var a5 = document.getElementById('primitiveroots')
+    a5.style.display = 'none';
+    var a6 = document.getElementById('androiddev')
+    a6.style.display = 'none';
+    var a7 = document.getElementById('mavs')
+    a7.style.display = 'none';
+    var a8 = document.getElementById('machinelearning')
+    a8.style.display = 'none';
+    var a9 = document.getElementById('philosophy')
+    a9.style.display = 'none';
+    var a0 = document.getElementById('findmore')
+    a0.style.display = 'none';
+    var e = document.getElementById(id);
+    e.style.display = 'block';   
+    }
+
 // Restart the game
 GameManager.prototype.restart = function () {
   this.storageManager.clearGameState();
   this.actuator.continueGame(); // Clear the game won/lost message
   this.setup();
+  toggle_visibility('simanta');
 };
+
+
 
 // Keep playing after winning (allows going over 2048)
 GameManager.prototype.keepPlaying = function () {
@@ -162,6 +192,28 @@ GameManager.prototype.move = function (direction) {
           merged.mergedFrom = [tile, next];
 
           self.grid.insertTile(merged);
+          var n=merged.value;
+            if (n==4){
+            toggle_visibility('webdev');}
+            else if (n==8){
+            toggle_visibility('sailboat');}
+            else if (n==16){
+            toggle_visibility('spherecodes');}
+            else if (n==32){
+            toggle_visibility('bitcoins');}
+            else if (n==64){
+            toggle_visibility('primitiveroots');}
+            else if (n==128){
+            toggle_visibility('androiddev');}
+            else if (n==256){
+            toggle_visibility('mavs');}
+            else if (n==512){
+            toggle_visibility('machinelearning');}
+            else if (n==1024){
+            toggle_visibility('philosophy');}
+            else if (n==2048){
+            toggle_visibility('findmore');}
+        
           self.grid.removeTile(tile);
 
           // Converge the two tiles' positions

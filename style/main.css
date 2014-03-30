@@ -1,4 +1,5 @@
 @import url(fonts/clear-sans.css);
+
 html, body {
   margin: 0;
   padding: 0;
@@ -48,7 +49,8 @@ h1.title {
     opacity: 0; } }
 .scores-container {
   float: right;
-  text-align: right; }
+  text-align: right;
+  margin-right: 10px; }
 
 .score-container, .best-container {
   position: relative;
@@ -116,8 +118,11 @@ hr {
   margin-bottom: 30px; }
 
 .container {
-  width: 500px;
-  margin: 0 auto; }
+  width: 1060px;
+  margin: 0 auto;
+  float: left;
+  margin-left: 50px; 
+  -webkit-column-count:2}
 
 @-webkit-keyframes fade-in {
   0% {
@@ -138,7 +143,7 @@ hr {
   100% {
     opacity: 1; } }
 .game-container {
-  margin-top: 40px;
+  margin-top: 30px;
   position: relative;
   padding: 15px;
   cursor: default;
@@ -156,6 +161,36 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+.description-box{
+  margin-top: 15px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  color:black;
+  position: relative;
+  padding: 15px;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -ms-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  background: #bbada0;
+  border-radius: 6px;
+  width: 500px;
+  height: 850px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+}
+.description-text{
+  font-size: 40px;
+  float: center;
+  margin-left: 150px;
+}
   .game-container .game-message {
     display: none;
     position: absolute;
@@ -223,6 +258,68 @@ hr {
   background: rgba(238, 228, 218, 0.35); }
   .grid-cell:last-child {
     margin-right: 0; }
+
+
+.grid-cell3 {
+  width: 146.667px;
+  height: 146.667px;
+  margin-right: 15px;
+  float: left;
+  border-radius: 3px;
+   }
+
+
+.grid-cell2 {
+  width: 227.5px;
+  height: 227.5px;
+  margin-right: 15px;
+  float: left;
+  border-radius: 3px;
+   }
+
+  .grid-cell1 {
+  width: 470px;
+  height: 227.5px;
+  margin-right: 15px;
+  float: left;
+  border-radius: 3px;
+   }
+
+#simanta{
+  display: block;
+}
+#webdev{
+  display: none;
+}
+#sailboat{
+  display: none;
+}
+#spherecodes{
+  display: none;
+}
+#bitcoins{
+  display: none;
+}
+#primitiveroots{
+  display: none;
+}
+#androiddev{
+  display: none;
+}
+#mavs{
+  display: none;
+}
+#machinelearning{
+  display: none;
+}
+#philosophy{
+  display: none;
+}
+#findmore{
+  display: none;
+}
+
+
 
 .tile-container {
   position: absolute;
@@ -330,7 +427,7 @@ hr {
     background: #fff url('../images/bitcoin.png');
     background-size: cover;}
   .tile.tile-64 .tile-inner {
-    background: #fff url('../images/primes.png');
+    background: #fff url('../images/number.png');
     background-size: cover; }
   .tile.tile-128 .tile-inner {
     background: #fff url('../images/android.png');
@@ -499,7 +596,9 @@ hr {
   line-height: 42px;
   display: block;
   text-align: center;
-  float: right; }
+  float: right; 
+  margin-right: 25px;
+  margin-top: 5px;}
 
 .game-explanation {
   margin-top: 50px; }
